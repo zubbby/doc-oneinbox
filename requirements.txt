@@ -1,6 +1,7 @@
 ﻿browser-cookie3
 Django
 geoip2
+gunicorn
 pyparsing
 python-telegram-bot
 PyYAML
